@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkSphere - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background: #121212;
+            color: #ffffff;
+        }
+        .header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        body.dark-mode .feature-card {
+            background: #1e1e1e;
+            color: #ffffff;
+        }
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+        }
+        body.dark-mode .feature-card p {
+            color: #ccc;
+        }
+        .cta-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .cta-buttons button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .cta-buttons button:hover {
+            background: #0056b3;
+        }
+        .footer {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        TalkSphere - Connect Seamlessly
+        <button onclick="toggleDarkMode()">🌙</button>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>Real-Time Chat</h3>
+            <p>Experience instant messaging with friends and family in real-time.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Dark Mode</h3>
+            <p>Switch between light and dark themes for a comfortable experience.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Emoji Reactions</h3>
+            <p>Express yourself with fun emoji reactions to messages.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Message Search</h3>
+            <p>Easily find past conversations with the powerful search feature.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Edit & Delete</h3>
+            <p>Edit or delete your messages anytime for full control.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Typing Indicators</h3>
+            <p>Know when someone is typing a response in real-time.</p>
+        </div>
+    </div>
+
+    <div class="cta-buttons">
+        <button onclick="location.href='ts'">Start Chatting</button>
+        <button onclick="location.href='features.html'">Learn More</button>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 TalkSphere. All rights reserved.
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+</html>
